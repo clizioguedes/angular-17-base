@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ui:
+    build: .
+    container_name: angular-base
+    restart: always
+    ports:
+      - ${HOST_PORT}:${NGINX_PORT}
+    environment:
+      NGINX_PORT: ${NGINX_PORT}
+      BACKEND_URL: ${BACKEND_URL}
