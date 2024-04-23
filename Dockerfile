@@ -1,6 +1,6 @@
 FROM node:20.12.2-alpine as build
 WORKDIR /usr/src/app
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm install --silent
 COPY . .
 RUN npm run build
